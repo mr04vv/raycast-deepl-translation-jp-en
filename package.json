@@ -5,6 +5,7 @@
   "description": "translate with deepL",
   "icon": "deepl.png",
   "author": "mooriii",
+  "owner": "atrae",
   "license": "MIT",
   "commands": [
     {
