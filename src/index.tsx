@@ -1,4 +1,4 @@
-import { ActionPanel, List, Action, getPreferenceValues } from "@raycast/api";
+import { ActionPanel, List, Action, getPreferenceValues, Detail } from "@raycast/api";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -46,6 +46,7 @@ export default function Command() {
     <List
       isLoading={isLoading}
       throttle
+      isShowingDetail={true}
       onSearchTextChange={(txt) => {
         setText(txt);
       }}
@@ -64,6 +65,7 @@ export default function Command() {
                 }
                 key={translation.text}
                 title={translation.text}
+                detail={<List.Item.Detail markdown={`${translation.text}`} />}
               />
             ))}
         </>
